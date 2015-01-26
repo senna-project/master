@@ -9,7 +9,7 @@
 
 
 #include "master.h"
-#include <wiringPi.h>
+//#include <wiringPi.h>
 
 #include <signal.h>
 #include <stdexcept>
@@ -48,10 +48,10 @@ int main(int argc, char** argv)
 		return 1;
 	}
 	//End the program if the wiringPi library is not found
-	if (wiringPiSetup() == -1) {
+/*	if (wiringPiSetup() == -1) {
 		YDLE_FATAL << "Error : Library wiringPi not found" << std::endl;
 		return -1;
-	}
+	}*/
 
 	Master master (argc, argv) ;
 
