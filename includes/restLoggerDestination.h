@@ -17,13 +17,13 @@ namespace ydle {
 
 class restLoggerDestination: public LogDestination {
 struct log_message{
-	std::string log_line;
-	log_level level;
+  std::string log_line;
+  log_level level;
 };
 
 public:
-	restLoggerDestination(log_level level, std::string hub_url);
-	static size_t responseCallback( char *response, size_t size, size_t nmemb, void *userdata);
+  restLoggerDestination(log_level level, std::string hub_url);
+  static size_t responseCallback( char *response, size_t size, size_t nmemb, void *userdata);
    /**
     * @brief Initialize the restLoggerDestination
     */
@@ -37,6 +37,7 @@ public:
 
 private:
 
+   void Sending(log_message & message);
    void Sending(Json::Value & message);
    std::queue<log_message> messages;
    bool stop;
