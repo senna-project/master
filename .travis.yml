@@ -2,8 +2,8 @@ language: cpp
 
 before_install:
     - sudo apt-get update -qq
-	- sudo apt-get install libmicrohttpd-dev libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev build-essential automake
+    - sudo apt-get install libmicrohttpd-dev libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev build-essential automake
 
 before_script:
-	- make
-	- sudo sh master.sh 
+    -  make
+    - sudo sh master.sh 
