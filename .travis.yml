@@ -2,8 +2,15 @@ language: cpp
 
 before_install:
     - sudo apt-get update -qq
-    - sudo apt-get install libmicrohttpd-dev libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev build-essential automake liblua5.1-0-dev
-
+    - sudo apt-get install libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev build-essential automake liblua5.1-0-dev
+    - cd ..
+    - wget http://ftpmirror.gnu.org/libmicrohttpd/libmicrohttpd-0.9.34.tar.gz
+    - tar xvzf libmicrohttpd-0.9.34.tar.gz
+    - cd libmicrohttpd-0.9.34
+    - ./configure
+    - make
+    - make install
+    - cd ../master
 before_script:
     -  make
     - sudo sh master.sh 
