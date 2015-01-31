@@ -9,7 +9,7 @@ Installation
 Requirements:
 
 ``` bash
-sudo aptitude install libmicrohttpd-dev libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev build-essential automake
+sudo aptitude install libmicrohttpd-dev libjsoncpp-dev libcurl4-openssl-dev libconfig++-dev libboost-signals-dev liblua5.1-0-dev build-essential automake
 
 $ git clone https://github.com/senna-project/master
 $ cd master
