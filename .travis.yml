@@ -9,7 +9,7 @@ before_install:
     - cd libmicrohttpd-0.9.34
     - ./configure
     - make
-    - make install
+    - sudo make install
     - cd ../master
 before_script:
     -  make
